@@ -1,0 +1,267 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Regina AI | Tundar Technologies</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Regina.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- ===========================
+     NAVBAR
+=========================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <img src="Images/logo.png" alt="Tundar Technologies Logo">
+
+        <h2>TUNDAR</h2>
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="Regina.html" class="active">Regina AI</a></li>
+
+    </ul>
+
+</nav>
+<!-- ===========================
+     REGINA HERO
+=========================== -->
+
+<section class="regina-hero">
+
+    <div class="regina-container">
+
+        <!-- Left Content -->
+        <div class="regina-content">
+
+            <span class="regina-tag">
+                TUNDAR TECHNOLOGIES
+            </span>
+
+            <h1>
+                Meet <span>Regina AI</span>
+            </h1>
+
+            <p>
+                Regina is Tundar Technologies' next-generation AI assistant,
+                designed to help you learn, create, code, solve problems,
+                and interact naturally through intelligent conversations.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="start-btn start-conversation">
+                    Start Conversation
+                </button>
+
+                <button class="regina-btn secondary start-conversation">
+                    Explore Regina
+                </button>
+
+            </div>
+
+            <div class="ai-status">
+                <span></span>
+                Regina Online
+            </div>
+
+        </div>
+
+        <!-- Right Content -->
+        <div class="regina-avatar">
+
+            <div class="ai-ring ring-1"></div>
+            <div class="ai-ring ring-2"></div>
+            <div class="ai-ring ring-3"></div>
+
+            <img
+                src="Images/Regina-illustration.png"
+                alt="Regina AI"
+                class="regina-logo"
+            >
+
+            <div class="floating-card card-1">
+                AI Assistant
+            </div>
+
+            <div class="floating-card card-2">
+                Voice Ready
+            </div>
+
+            <div class="floating-card card-3">
+                Smart Search
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+     REGINA FEATURES
+=========================== -->
+
+<section class="regina-features">
+
+    <div class="section-title">
+
+        <h2>Why Regina AI?</h2>
+
+        <p>
+            Built by Tundar Technologies to make AI more intelligent,
+            more natural, and more helpful.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <h3>💬 Natural Conversations</h3>
+
+            <p>
+                Talk naturally with Regina using intelligent,
+                human-like conversations.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>🧠 Intelligent Reasoning</h3>
+
+            <p>
+                Analyze ideas, solve problems, and generate
+                creative solutions.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>💻 Coding Assistant</h3>
+
+            <p>
+                Build websites, applications, AI systems,
+                and software with Regina's assistance.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>🌍 Built for Everyone</h3>
+
+            <p>
+                Regina is designed to help students,
+                businesses, developers, and creators worldwide.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+     FOOTER
+=========================== -->
+
+<footer>
+
+    <p>
+        © 2026 Tundar Technologies LTD. All rights reserved.
+    </p>
+
+</footer>
+<!-- ===========================
+     REGINA AI CHAT WINDOW
+=========================== -->
+
+<div class="regina-chat" id="reginaChat">
+
+    <!-- Chat Header -->
+    <div class="chat-header">
+
+        <div class="chat-logo">
+
+            <div class="logo-circle">R</div>
+
+            <div>
+                <h3>Regina AI</h3>
+                <div class="ai-status">● Online</div>
+            </div>
+
+        </div>
+
+        <button class="close-chat" id="closeChat">✕</button>
+
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="chat-body" id="chatBody">
+
+        <!-- Welcome Message -->
+        <div class="message ai">
+
+            <div class="bubble">
+
+                👋 Hello! I'm Regina AI.
+
+                <br><br>
+
+                Welcome to Tundar Technologies.
+
+                <br><br>
+
+                How can I help you today?
+
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Message Regina..."
+            autocomplete="off"
+        >
+
+        <button id="sendMessage">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<script src="Regina.js"></script>
+
+</body>
+</html>
