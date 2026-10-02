@@ -2,6 +2,8 @@ import {
   saveMessage,
   getConversation
 } from "../memory/chatMemory.js";
+import { generateResponse } from "../services/aiService.js";
+
 export const sendMessage = async (req, res) => {
   try {
     const { message, sessionId = "default" } = req.body;
@@ -17,7 +19,7 @@ export const sendMessage = async (req, res) => {
 
     const history = getConversation(sessionId);
 
-const reply = await generateResponse(message, history);
+    const reply = await generateResponse(message, history);
 
     saveMessage(sessionId, "assistant", reply);
 
@@ -31,30 +33,6 @@ const reply = await generateResponse(message, history);
     res.status(500).json({
       success: false,
       message: error.message
-    });
-  }
-};
-  try {
-    const { message } = req.body;
-console.log("Message received:", message);
-    if (!message) {
-      return res.status(400).json({
-        success: false,
-        message: "Message is required."
-      });
-    }
-
-    const reply = await generateResponse(message);
-
-    res.status(200).json({
-      success: true,
-      user: message,
-      regina: reply
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: "Internal Server Error"
     });
   }
 };
