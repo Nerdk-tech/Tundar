@@ -472,3 +472,66 @@ document.querySelectorAll("#footer-year").forEach((el) => {
     el.textContent = new Date().getFullYear();
 });
 
+
+// ============================
+// V5 — LOADER PROGRESS BAR
+// ============================
+
+(() => {
+
+    const bar = document.getElementById("loaderBar");
+
+    if (!bar) return;
+
+    let p = 0;
+
+    const iv = setInterval(() => {
+
+        p = Math.min(100, p + Math.random() * 16 + 6);
+
+        bar.style.width = p + "%";
+
+        if (p >= 100) clearInterval(iv);
+
+    }, 120);
+
+})();
+
+
+// ============================
+// V5 — HERO 3D SCENE PARALLAX
+// ============================
+
+(() => {
+
+    const scene = document.getElementById("scene3d");
+
+    if (!scene) return;
+
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
+    const hero = document.querySelector(".hero") || document.getElementById("home");
+
+    if (!hero) return;
+
+    hero.addEventListener("mousemove", (e) => {
+
+        const x = e.clientX / window.innerWidth - 0.5;
+
+        const y = e.clientY / window.innerHeight - 0.5;
+
+        scene.style.transform =
+
+            "rotateY(" + (x * 8).toFixed(2) + "deg) rotateX(" +
+
+            (-y * 6).toFixed(2) + "deg)";
+
+    });
+
+    hero.addEventListener("mouseleave", () => {
+
+        scene.style.transform = "";
+
+    });
+
+})();
